@@ -20,17 +20,27 @@ import models.Pedido;
 import models.Producto;
 
 /**
- *
+ * Clase DAO Data Access Object, para acceder a una base de datos y realizar consultas
  * @author medin
  */
 public class PedidoDAO {
 
+    /**
+     * Variable que inicia una conexión
+     */
     private static Connection con;
 
+    /**
+     * Convertimos un java.util.Date a un Date de sql.
+     */
     java.util.Date utilDate = new java.util.Date();
     long lnMilisegundos = utilDate.getTime();
     java.sql.Date date = new java.sql.Date(lnMilisegundos);
 
+    /**
+     * Código static, se ejecuta al principio una sola vez cada vez que se referencie a esta clase.
+     * Realiza la conexión con la base de datos
+     */
     static {
         String url = "jdbc:mysql://localhost:3306/comandas?zeroDateTimeBehavior=CONVERT_TO_NULL";
         String user = "root";
@@ -43,6 +53,9 @@ public class PedidoDAO {
         }
     }
 
+    /**
+     * Querys para consultar la base de datos
+     */
     static final String LISTA_QUERY = "SELECT * FROM pedidos WHERE pendiente = 'si' AND fecha = ?";
     static final String LISTA_PRODUCTO = "SELECT * FROM producto";
     static final String GET_PRODUCTO = "SELECT * FROM producto WHERE id = ?";
@@ -51,6 +64,11 @@ public class PedidoDAO {
     static final String INSERT_PEDIDO = "INSERT INTO pedidos (product_id, fecha, precio, pendiente, recogido) VALUES (?, ?, ?, ?, ?)";
     static final String MODIFY_PEDIDO = "UPDATE pedidos SET pendiente = ?, recogido = ? WHERE id = ?";
 
+    /**
+     * Crea un pedido nuevo
+     * @param p
+     * @return Integer para confirmar inserción
+     */
     public Integer crearPedido(Producto p) {
         try ( PreparedStatement ps = con.prepareStatement(INSERT_PEDIDO, RETURN_GENERATED_KEYS)) {
 
@@ -76,6 +94,11 @@ public class PedidoDAO {
         }
     }
 
+    /**
+     * Muestra pedidos de hoy
+     * @param date fecha actual
+     * @return ArrayList de pedidos.
+     */
     public ArrayList<Pedido> listPedidos(java.sql.Date date) {
 
         var listaPedidos = new ArrayList<Pedido>();
@@ -105,6 +128,10 @@ public class PedidoDAO {
         return listaPedidos;
     }
 
+    /**
+     * Muestra los productos
+     * @return ArrayList de productos
+     */
     public ArrayList<Producto> listCarta() {
 
         var listaCarta = new ArrayList<Producto>();
@@ -128,6 +155,11 @@ public class PedidoDAO {
         return listaCarta;
     }
 
+    /**
+     * Devuelve un producto buscado por su id
+     * @param id
+     * @return un producto
+     */
     public Producto seleccionarProducto(int id) {
 
         var producto = new Producto();
@@ -151,7 +183,12 @@ public class PedidoDAO {
             return null;
         }
     }
-        
+    
+    /**
+     * Devuelve un pedido buscado por su id
+     * @param id
+     * @return un pedido
+     */
     public Pedido seleccionarPedido(int id) {
 
         var pedido = new Pedido();
@@ -180,6 +217,11 @@ public class PedidoDAO {
 
     }
 
+    /**
+     * Modifica campos de estado en la tabla pedido y devuelve true si se lleva a cabo la modificacion
+     * @param id
+     * @return booleano
+     */
     public Boolean recogerPedido(int id) {
         try ( PreparedStatement ps = con.prepareStatement(MODIFY_PEDIDO, RETURN_GENERATED_KEYS)) {
 
@@ -203,6 +245,11 @@ public class PedidoDAO {
         }
     }
 
+    /**
+     * Elimina un pedido por su id
+     * @param id
+     * @return booleano
+     */
     public boolean eliminarPedido(int id) {
 
         try ( PreparedStatement ps = con.prepareStatement(DELETE_ID)) {

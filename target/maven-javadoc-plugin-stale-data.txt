@@ -1,0 +1,53 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/medin/.m2/repository/mysql/mysql-connector-java/8.0.26/mysql-connector-java-8.0.26.jar;C:/Users/medin/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'16'
+-sourcepath
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'CRUDcomandas 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'CRUDcomandas 1.0-SNAPSHOT API'
+com.mycompany.crudcomandas
+models
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/src/main/java/com/mycompany/crudcomandas/Main.java'
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/src/main/java/com/mycompany/crudcomandas/PedidoDAO.java'
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/src/main/java/models/Pedido.java'
+'C:/Users/medin/Documents/NetBeansProjects/CRUDcomandas/src/main/java/models/Producto.java'
+C:\Users\medin\.m2\repository\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar = 1635442335261
+C:\Users\medin\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar = 1635442335804
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\src\main\java = 1635441158782
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\allclasses-index.html = 1635545268278
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\allpackages-index.html = 1635545268283
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\element-list = 1635545268123
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\help-doc.html = 1635545268342
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\index-all.html = 1635545268327
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\index.html = 1635545268254
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\jquery-ui.overrides.css = 1635545268460
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\member-search-index.js = 1635545268302
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\module-search-index.js = 1635545268289
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\overview-summary.html = 1635545268334
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\overview-tree.html = 1635545268242
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\package-search-index.js = 1635545268293
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\script.js = 1635545268353
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\search.js = 1635545268362
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\stylesheet.css = 1635545268348
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\tag-search-index.js = 1635545268305
+C:\Users\medin\Documents\NetBeansProjects\CRUDcomandas\target\site\apidocs\type-search-index.js = 1635545268298

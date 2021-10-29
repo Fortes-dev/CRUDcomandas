@@ -8,11 +8,15 @@ package models;
 import java.sql.Date;
 
 /**
- *
- * @author medin
+ 
+ * @author medin 
+ * Modelo de la tabla pedidos
  */
 public class Pedido {
-    
+
+    /**
+     * Atributos que coinciden con las columnas de la tabla pedidos
+     */
     private int id;
     private int product_id;
     private Date fecha;
@@ -20,9 +24,22 @@ public class Pedido {
     private String pendiente;
     private String recogido;
 
+    /**
+     * Constructor vacio
+     */
     public Pedido() {
     }
 
+    /**
+     * Constructor con parámetros
+     *
+     * @param id
+     * @param product_id
+     * @param fecha
+     * @param precio
+     * @param pendiente
+     * @param recogido
+     */
     public Pedido(int id, int product_id, Date fecha, double precio, String pendiente, String recogido) {
         this.id = id;
         this.product_id = product_id;
@@ -32,6 +49,11 @@ public class Pedido {
         this.recogido = recogido;
     }
 
+    /**
+     * Getters y setters de los campos/atributos
+     * @return 
+     */
+    
     public int getId() {
         return id;
     }
@@ -80,11 +102,13 @@ public class Pedido {
         this.recogido = recogido;
     }
 
+    /**
+     * Método toString para mostar un pedido por consola.
+     * @return 
+     */
     @Override
     public String toString() {
         return "Pedido{" + "id=" + id + ", product_id=" + product_id + ", fecha=" + fecha + ", precio=" + precio + ", pendiente=" + pendiente + ", recogido=" + recogido + '}';
     }
-    
-    
-    
+
 }

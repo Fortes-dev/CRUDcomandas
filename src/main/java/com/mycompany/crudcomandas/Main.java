@@ -29,6 +29,9 @@ public class Main {
         menu();
     }
 
+    /**
+     * Método void para mostrar un menu de manera recursiva
+     */
     public static void menu() {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
