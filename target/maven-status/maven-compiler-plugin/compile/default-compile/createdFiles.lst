@@ -1,0 +1,5 @@
+com\mycompany\crudcomandas\PedidoDAO.class
+com\mycompany\crudcomandas\ProductoDAO.class
+models\Pedido.class
+models\Producto.class
+com\mycompany\crudcomandas\Main.class
